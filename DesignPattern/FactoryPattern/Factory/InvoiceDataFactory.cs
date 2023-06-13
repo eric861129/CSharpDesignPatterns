@@ -1,5 +1,5 @@
-﻿using DesignPattern.Factory.Interfaces;
-using DesignPattern.FactoryPattern.DataGenerator;
+﻿using DesignPattern.FactoryPattern.DataGenerator;
+using DesignPattern.FactoryPattern.DataGenerator.Interface;
 using DesignPattern.FactoryPattern.Enum;
 using DesignPattern.FactoryPattern.Factory;
 using DesignPattern.FactoryPattern.Models;

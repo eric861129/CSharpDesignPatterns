@@ -1,5 +1,5 @@
 ﻿using DesignPattern.Factory.Business;
-using DesignPattern.Factory.Interfaces;
+using DesignPattern.FactoryPattern.DataGenerator.Interface;
 using DesignPattern.FactoryPattern.Enum;
 
 namespace DesignPattern.FactoryPattern.DataGenerator

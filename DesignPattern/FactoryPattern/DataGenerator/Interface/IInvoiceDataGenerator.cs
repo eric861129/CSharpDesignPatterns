@@ -1,4 +1,4 @@
-﻿namespace DesignPattern.Factory.Interfaces
+﻿namespace DesignPattern.FactoryPattern.DataGenerator.Interface
 {
     /// <summary>
     /// 生產器介面

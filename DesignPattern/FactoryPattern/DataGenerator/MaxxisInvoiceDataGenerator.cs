@@ -12,7 +12,7 @@
         /// <param name="year"></param>
         /// <param name="month"></param>
         /// <returns></returns>
-        public new string GenerateInvoiceNo(int No, int? year, int? month)
+        public string GenerateInvoiceNo(int No, int? year, int? month)
         {
             year ??= DateTime.UtcNow.Year;
             month ??= DateTime.UtcNow.Month;
