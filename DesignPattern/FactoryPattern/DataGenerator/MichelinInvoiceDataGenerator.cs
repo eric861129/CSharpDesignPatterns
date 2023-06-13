@@ -1,12 +1,6 @@
 ﻿using DesignPattern.Factory.Business;
 using DesignPattern.Factory.Interfaces;
-using DesignPattern.Factory.Service;
-using DesignPattern.FactoryPattern.Factory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DesignPattern.FactoryPattern.Enum;
 
 namespace DesignPattern.FactoryPattern.DataGenerator
 {
@@ -25,6 +19,17 @@ namespace DesignPattern.FactoryPattern.DataGenerator
         {
             var Day = TireProvider.Michelin.TireProviderInvoiceDay();
             return InvoiceBusiness.GetDateTime(Day, year, month);
+        }
+        /// <summary>
+        /// 米其林發票單號
+        /// </summary>
+        /// <param name="No"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <returns></returns>
+        public string GenerateInvoiceNo(int No, int? year, int? month)
+        {
+            return $"M{year}{month.ToString().PadLeft(2, '0')}{No.ToString().PadLeft(6, '0')}";
         }
     }
 }

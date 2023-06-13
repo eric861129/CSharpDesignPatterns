@@ -1,9 +1,4 @@
-﻿using DesignPattern.Factory.Service;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DesignPattern.FactoryPattern.Enum;
 
 namespace DesignPattern.Factory.Business
 {
@@ -18,7 +13,7 @@ namespace DesignPattern.Factory.Business
             var InvoiceProviderDay = new Dictionary<TireProvider, int>
             {
                 { TireProvider.Michelin, 6 },
-                { TireProvider.MAXXIS, 7 },
+                { TireProvider.ChengShin, 7 },
                 { TireProvider.Bridgestone, 15 },
                 { TireProvider.Goodyear, 20 },
             };

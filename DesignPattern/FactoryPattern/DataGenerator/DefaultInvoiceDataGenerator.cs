@@ -1,10 +1,5 @@
 ﻿using DesignPattern.Factory.Business;
 using DesignPattern.Factory.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPattern.FactoryPattern.DataGenerator
 {
@@ -16,6 +11,11 @@ namespace DesignPattern.FactoryPattern.DataGenerator
         public DateTime GenerateInvoiceDate(int? year, int? month)
         {
             return InvoiceBusiness.GetDateTime(1, year, month);
+        }
+
+        public string GenerateInvoiceNo(int No, int? year, int? month)
+        {
+            return "ERROR";
         }
     }
 }

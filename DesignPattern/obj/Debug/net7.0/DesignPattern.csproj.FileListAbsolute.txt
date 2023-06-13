@@ -1,0 +1,12 @@
+C:\Users\EricHuang黃祈豫\Desktop\MySelf\CSharpDesignPatterns\DesignPattern\bin\Debug\net7.0\DesignPattern.deps.json
+C:\Users\EricHuang黃祈豫\Desktop\MySelf\CSharpDesignPatterns\DesignPattern\bin\Debug\net7.0\DesignPattern.dll
+C:\Users\EricHuang黃祈豫\Desktop\MySelf\CSharpDesignPatterns\DesignPattern\bin\Debug\net7.0\DesignPattern.pdb
+C:\Users\EricHuang黃祈豫\Desktop\MySelf\CSharpDesignPatterns\DesignPattern\obj\Debug\net7.0\DesignPattern.csproj.AssemblyReference.cache
+C:\Users\EricHuang黃祈豫\Desktop\MySelf\CSharpDesignPatterns\DesignPattern\obj\Debug\net7.0\DesignPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EricHuang黃祈豫\Desktop\MySelf\CSharpDesignPatterns\DesignPattern\obj\Debug\net7.0\DesignPattern.AssemblyInfoInputs.cache
+C:\Users\EricHuang黃祈豫\Desktop\MySelf\CSharpDesignPatterns\DesignPattern\obj\Debug\net7.0\DesignPattern.AssemblyInfo.cs
+C:\Users\EricHuang黃祈豫\Desktop\MySelf\CSharpDesignPatterns\DesignPattern\obj\Debug\net7.0\DesignPattern.csproj.CoreCompileInputs.cache
+C:\Users\EricHuang黃祈豫\Desktop\MySelf\CSharpDesignPatterns\DesignPattern\obj\Debug\net7.0\DesignPattern.dll
+C:\Users\EricHuang黃祈豫\Desktop\MySelf\CSharpDesignPatterns\DesignPattern\obj\Debug\net7.0\refint\DesignPattern.dll
+C:\Users\EricHuang黃祈豫\Desktop\MySelf\CSharpDesignPatterns\DesignPattern\obj\Debug\net7.0\DesignPattern.pdb
+C:\Users\EricHuang黃祈豫\Desktop\MySelf\CSharpDesignPatterns\DesignPattern\obj\Debug\net7.0\ref\DesignPattern.dll

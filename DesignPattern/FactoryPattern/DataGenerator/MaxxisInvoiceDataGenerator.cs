@@ -1,24 +1,20 @@
-﻿using DesignPattern.Factory.Business;
-using DesignPattern.Factory.Interfaces;
-using DesignPattern.Factory.Service;
-
-namespace DesignPattern.FactoryPattern.DataGenerator
+﻿namespace DesignPattern.FactoryPattern.DataGenerator
 {
     /// <summary>
     /// 馬吉斯發票資料生成器
     /// </summary>
-    public class MaxxisInvoiceDataGenerator : IInvoiceDataGenerator
+    public class MaxxisInvoiceDataGenerator : ChengShinInvoiceDataGenerator
     {
         /// <summary>
-        /// 馬吉斯發票日期
+        /// 馬吉斯發票單號
         /// </summary>
+        /// <param name="No"></param>
         /// <param name="year"></param>
         /// <param name="month"></param>
         /// <returns></returns>
-        public DateTime GenerateInvoiceDate(int? year, int? month)
+        public new string GenerateInvoiceNo(int No, int? year, int? month)
         {
-            var Day = TireProvider.MAXXIS.TireProviderInvoiceDay();
-            return InvoiceBusiness.GetDateTime(Day, year, month);
+            return $"MX{year}{month.ToString().PadLeft(2, '0')}{No.ToString().PadLeft(6, '0')}";
         }
     }
 }
