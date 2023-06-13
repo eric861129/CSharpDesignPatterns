@@ -29,6 +29,8 @@ namespace DesignPattern.FactoryPattern.DataGenerator
         /// <returns></returns>
         public string GenerateInvoiceNo(int No, int? year, int? month)
         {
+            year ??= DateTime.UtcNow.Year;
+            month ??= DateTime.UtcNow.Month;
             return $"CS{year}{month.ToString().PadLeft(2, '0')}{No.ToString().PadLeft(6,'0')}";
         }
     }
