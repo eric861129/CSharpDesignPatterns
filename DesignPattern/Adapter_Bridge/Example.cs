@@ -12,9 +12,9 @@ namespace DesignPattern.Adapter_Bridge
         {
             _carDataFactory = carDataFactory;
         }
-        public SUV_Car GenSuvCarExample()
+        public Car GenSuvCarExample()
         {
-            var X1 = new SUV_Car(CarType.SUV, _carDataFactory);
+            var X1 = new Car(_carDataFactory, CarType.SUV);
 
             return X1;
         }
@@ -22,7 +22,7 @@ namespace DesignPattern.Adapter_Bridge
         {
             var ConstructionVehicleDataFactory = new ConstructionVehicleDataFactory();
             var ConstructionVehicleTool = new ConstructionVehicleTool() { ToolName = "吊臂", ToolSize = ToolSize.Medium };
-            var Crane = new ConstructionVehicle_Car(ConstructionVehicleDataFactory, CarType.ConstructionVehicle, ConstructionVehicleTool);
+            var Crane = new ConstructionVehicle_Car(_carDataFactory, CarType.ConstructionVehicle, ConstructionVehicleTool, ConstructionVehicleDataFactory);
             return Crane;
         }
     }

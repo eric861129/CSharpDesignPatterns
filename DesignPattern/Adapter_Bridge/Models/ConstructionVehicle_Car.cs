@@ -6,14 +6,12 @@ namespace DesignPattern.Adapter_Bridge.Models
 {
     public class ConstructionVehicle_Car : Car
     {
-        private readonly CarType _carType;
-        private new readonly ConstructionVehicleDataFactory _carDataFactory;
-        private readonly ConstructionVehicleTool ConstructionVehicleTool;
-        public ConstructionVehicle_Car(ConstructionVehicleDataFactory carDataFactory, CarType carType, ConstructionVehicleTool constructionVehicleTool) : base(carDataFactory)
+        public ConstructionVehicleTool _ConstructionVehicleTool;
+        public ConstructionVehicleDataFactory _ConstructionVehicleDataFactory;
+        public ConstructionVehicle_Car(ICarDataFactory carDataFactory, CarType CarType, ConstructionVehicleTool constructionVehicleTool, ConstructionVehicleDataFactory constructionVehicleDataFactory) : base(carDataFactory, CarType)
         {
-            this._carType = carType;
-            this._carDataFactory = carDataFactory;
-            this.ConstructionVehicleTool = constructionVehicleTool;
+            _ConstructionVehicleTool = constructionVehicleTool;
+            this._ConstructionVehicleDataFactory = constructionVehicleDataFactory;
         }
 
         public int ToolWeightLimit { get; set; }
@@ -22,7 +20,7 @@ namespace DesignPattern.Adapter_Bridge.Models
         {
             this.NumOfSeat = _carDataFactory.GetCarNumOfSeat(CarType.ConstructionVehicle);
             this.NumOfTire = _carDataFactory.GetCarNumOfTire(CarType.ConstructionVehicle);
-            this.ToolWeightLimit = _carDataFactory.GetToolWeightLimit(ConstructionVehicleTool.ToolSize);
+            this.ToolWeightLimit = _ConstructionVehicleDataFactory.GetToolWeightLimit(_ConstructionVehicleTool.ToolSize);
         }
     }
 }

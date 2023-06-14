@@ -1,13 +1,16 @@
 ﻿using DesignPattern.Adapter_Bridge.Factory;
+using DesignPattern.Models.Enums;
 
 namespace DesignPattern.Models.Car
 {
-    public abstract class Car
+    public class Car
     {
         protected ICarDataFactory _carDataFactory;
-        public Car(ICarDataFactory carDataFactory)
+        protected CarType _CarType;
+        public Car(ICarDataFactory carDataFactory, CarType CarType)
         {
-            _carDataFactory = carDataFactory;
+            this._carDataFactory = carDataFactory;
+            this._CarType = CarType;
         }
         /// <summary>
         /// 車名
@@ -32,6 +35,10 @@ namespace DesignPattern.Models.Car
         /// <summary>
         /// 設定車輛資訊
         /// </summary>
-        public abstract void SetCarInfo();
+        public virtual void SetCarInfo()
+        {
+            this.NumOfSeat = _carDataFactory.GetCarNumOfSeat(_CarType);
+            this.NumOfTire = _carDataFactory.GetCarNumOfTire(_CarType);
+        }
     }
 }
