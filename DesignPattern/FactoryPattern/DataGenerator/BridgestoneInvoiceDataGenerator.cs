@@ -1,6 +1,6 @@
 ﻿using DesignPattern.Factory.Business;
 using DesignPattern.FactoryPattern.DataGenerator.Interface;
-using DesignPattern.FactoryPattern.Enum;
+using DesignPattern.Models.Enums;
 
 namespace DesignPattern.FactoryPattern.DataGenerator
 {

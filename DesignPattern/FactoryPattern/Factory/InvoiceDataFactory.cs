@@ -1,8 +1,8 @@
 ﻿using DesignPattern.FactoryPattern.DataGenerator;
 using DesignPattern.FactoryPattern.DataGenerator.Interface;
-using DesignPattern.FactoryPattern.Enum;
 using DesignPattern.FactoryPattern.Factory;
-using DesignPattern.FactoryPattern.Models;
+using DesignPattern.Models.Enums;
+using DesignPattern.Models.Invoice;
 using Extensions;
 namespace DesignPattern.Factory.Service
 {

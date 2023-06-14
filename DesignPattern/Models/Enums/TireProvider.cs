@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DesignPattern.FactoryPattern.Enum
+namespace DesignPattern.Models.Enums
 {
     /// <summary>
     /// 輪胎供應商

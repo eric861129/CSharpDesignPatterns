@@ -1,6 +1,6 @@
 ﻿using DesignPattern.Factory.Business;
 using DesignPattern.FactoryPattern.DataGenerator.Interface;
-using DesignPattern.FactoryPattern.Enum;
+using DesignPattern.Models.Enums;
 
 namespace DesignPattern.FactoryPattern.DataGenerator
 {
@@ -31,7 +31,7 @@ namespace DesignPattern.FactoryPattern.DataGenerator
         {
             year ??= DateTime.UtcNow.Year;
             month ??= DateTime.UtcNow.Month;
-            return $"CS{year}{month.ToString().PadLeft(2, '0')}{No.ToString().PadLeft(6,'0')}";
+            return $"CS{year}{month.ToString().PadLeft(2, '0')}{No.ToString().PadLeft(6, '0')}";
         }
     }
 }

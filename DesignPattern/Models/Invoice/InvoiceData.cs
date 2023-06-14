@@ -1,6 +1,6 @@
-﻿using DesignPattern.FactoryPattern.Enum;
+﻿using DesignPattern.Models.Enums;
 
-namespace DesignPattern.FactoryPattern.Models
+namespace DesignPattern.Models.Invoice
 {
     /// <summary>
     /// 發票資料

@@ -1,4 +1,4 @@
-﻿using DesignPattern.FactoryPattern.Enum;
+﻿using DesignPattern.Models.Enums;
 
 namespace DesignPattern.Factory.Business
 {
