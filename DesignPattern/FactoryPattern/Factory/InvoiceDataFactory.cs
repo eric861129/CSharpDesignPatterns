@@ -3,7 +3,6 @@ using DesignPattern.FactoryPattern.DataGenerator.Interface;
 using DesignPattern.FactoryPattern.Factory;
 using DesignPattern.Models.Enums;
 using DesignPattern.Models.Invoice;
-using Extensions;
 namespace DesignPattern.Factory.Service
 {
 
@@ -20,15 +19,14 @@ namespace DesignPattern.Factory.Service
         /// <param name="Year"></param>
         /// <param name="Month"></param>
         /// <returns></returns>
-        public static InvoiceData GenInvoiceData(string TireProvider, int No, int? Year = null, int? Month = null)
+        public InvoiceData GenInvoiceData(InvoiceInfo InvoiceInfo)
         {
-            var provider = TireProvider.ToEnum<TireProvider>();
-            var invoiceDateGenerator = GetInvoiceDateGenerator(provider);
+            var invoiceDateGenerator = GetInvoiceDateGenerator(InvoiceInfo.TireProvider);
             var result = new InvoiceData
             {
-                TireProvider = provider,
-                InvoiceDate = invoiceDateGenerator.GenerateInvoiceDate(Year, Month),
-                InvoiceNo = invoiceDateGenerator.GenerateInvoiceNo(No, Year, Month)
+                TireProvider = InvoiceInfo.TireProvider,
+                InvoiceDate = invoiceDateGenerator.GenerateInvoiceDate(InvoiceInfo.Year, InvoiceInfo.Month),
+                InvoiceNo = invoiceDateGenerator.GenerateInvoiceNo(InvoiceInfo)
             };
             return result;
         }
@@ -40,11 +38,10 @@ namespace DesignPattern.Factory.Service
         /// <param name="year">年份</param>
         /// <param name="month">月份</param>
         /// <returns>生成的發票日期</returns>
-        public DateTime GenerateTireProviderInvoiceDate(string TireProvider, int? year = null, int? month = null)
+        public DateTime GenerateTireProviderInvoiceDate(InvoiceInfo InvoiceInfo)
         {
-            var provider = TireProvider.ToEnum<TireProvider>();
-            var invoiceDateGenerator = GetInvoiceDateGenerator(provider);
-            return invoiceDateGenerator.GenerateInvoiceDate(year, month);
+            var invoiceDateGenerator = GetInvoiceDateGenerator(InvoiceInfo.TireProvider);
+            return invoiceDateGenerator.GenerateInvoiceDate(InvoiceInfo.Year, InvoiceInfo.Month);
         }
 
         /// <summary>

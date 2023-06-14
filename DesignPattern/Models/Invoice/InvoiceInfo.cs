@@ -23,6 +23,6 @@ namespace DesignPattern.Models.Invoice
         /// <summary>
         /// 產品別
         /// </summary>
-        public TireType? ProductType { get; set; }
+        public TireType ProductType { get; set; }
     }
 }

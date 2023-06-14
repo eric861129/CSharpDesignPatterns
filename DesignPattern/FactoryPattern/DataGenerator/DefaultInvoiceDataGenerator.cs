@@ -1,5 +1,6 @@
 ﻿using DesignPattern.Factory.Business;
 using DesignPattern.FactoryPattern.DataGenerator.Interface;
+using DesignPattern.Models.Invoice;
 
 namespace DesignPattern.FactoryPattern.DataGenerator
 {
@@ -13,9 +14,10 @@ namespace DesignPattern.FactoryPattern.DataGenerator
             return InvoiceBusiness.GetDateTime(1, year, month);
         }
 
-        public string GenerateInvoiceNo(int No, int? year, int? month)
+        public string GenerateInvoiceNo(InvoiceInfo InvoiceInfo)
         {
             return "ERROR";
+
         }
     }
 }

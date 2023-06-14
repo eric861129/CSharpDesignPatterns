@@ -7,7 +7,7 @@ namespace DesignPattern.Adapter_Bridge.Models
     public class ConstructionVehicle_Car : Car
     {
         private readonly CarType _carType;
-        private readonly ConstructionVehicleDataFactory _carDataFactory;
+        private new readonly ConstructionVehicleDataFactory _carDataFactory;
         private readonly ConstructionVehicleTool ConstructionVehicleTool;
         public ConstructionVehicle_Car(ConstructionVehicleDataFactory carDataFactory, CarType carType, ConstructionVehicleTool constructionVehicleTool) : base(carDataFactory)
         {

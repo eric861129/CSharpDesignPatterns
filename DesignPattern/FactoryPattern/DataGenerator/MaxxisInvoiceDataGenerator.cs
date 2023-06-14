@@ -1,4 +1,6 @@
-﻿namespace DesignPattern.FactoryPattern.DataGenerator
+﻿using DesignPattern.Models.Invoice;
+
+namespace DesignPattern.FactoryPattern.DataGenerator
 {
     /// <summary>
     /// 馬吉斯發票資料生成器
@@ -12,11 +14,11 @@
         /// <param name="year"></param>
         /// <param name="month"></param>
         /// <returns></returns>
-        public string GenerateInvoiceNo(int No, int? year, int? month)
+        public static new string GenerateInvoiceNo(InvoiceInfo InvoiceInfo)
         {
-            year ??= DateTime.UtcNow.Year;
-            month ??= DateTime.UtcNow.Month;
-            return $"MX{year}{month.ToString().PadLeft(2, '0')}{No.ToString().PadLeft(6, '0')}";
+            InvoiceInfo.Year ??= DateTime.UtcNow.Year;
+            InvoiceInfo.Month ??= DateTime.UtcNow.Month;
+            return $"MX{InvoiceInfo.Year}{InvoiceInfo.Month.ToString().PadLeft(2, '0')}{InvoiceInfo.No.ToString().PadLeft(6, '0')}";
         }
     }
 }

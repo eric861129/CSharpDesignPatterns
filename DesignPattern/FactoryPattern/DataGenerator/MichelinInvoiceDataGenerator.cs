@@ -1,6 +1,7 @@
 ﻿using DesignPattern.Factory.Business;
 using DesignPattern.FactoryPattern.DataGenerator.Interface;
 using DesignPattern.Models.Enums;
+using DesignPattern.Models.Invoice;
 
 namespace DesignPattern.FactoryPattern.DataGenerator
 {
@@ -27,11 +28,11 @@ namespace DesignPattern.FactoryPattern.DataGenerator
         /// <param name="year"></param>
         /// <param name="month"></param>
         /// <returns></returns>
-        public string GenerateInvoiceNo(int No, int? year, int? month)
+        public string GenerateInvoiceNo(InvoiceInfo InvoiceInfo)
         {
-            year ??= DateTime.UtcNow.Year;
-            month ??= DateTime.UtcNow.Month;
-            return $"M{year}{month.ToString().PadLeft(2, '0')}{No.ToString().PadLeft(6, '0')}";
+            InvoiceInfo.Year ??= DateTime.UtcNow.Year;
+            InvoiceInfo.Month ??= DateTime.UtcNow.Month;
+            return $"M{InvoiceInfo.Year}{InvoiceInfo.Month.ToString().PadLeft(2, '0')}{InvoiceInfo.No.ToString().PadLeft(6, '0')}";
         }
     }
 }
